@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="p-1">
+  <form name="student" method="post" action="">
+  <div class="container">
+    <div class="row">
+      <center><table border=10 class="bg-info text-white display-7 font-weight-bold">
+      <thead>
+        <h2 class="bg-info text-white font-weight-bold"><b>&nbsp &nbsp &nbsp&nbsp MARK ATTENDENCE</b></h2>
+      </thead>
+      <tr><td>PIC</td><td>NO.</td><td>EMPLOYEE NAME</td><td>DESIGNATION</td>
+      <td>SELECT DATE<br><hr><input type="date" id="imark" vakue=""></td>
+      <td>SELECT DATE<br><hr><input type="date" id="imark" vakue=""></td>
+      <td>SELECT DATE<br><hr><input type="date" id="imark" vakue=""></td>
+      <td>SELECT DATE<br><hr><input type="date" id="imark" vakue=""></td>
+      <td>SELECT DATE<br><hr><input type="date" id="imark" vakue=""></td>
+      </tr>
+
+<!--------------1-------------------------------------------------------------------------------------------------------------------------->
+      <tr><td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB_QXdutCfHI2pHJT2yCxFdO2IHOzFauVGuQ&usqp=CAU" width="97" height="105"></td><td><center>S12578</center></td>
+      <td class=p-2 mb-2 bg-white text-dark"><a href="">KARTHIK</td>
+      <td class="text-center">ANALYST</td>
+       <td><select name="row1col1" id="irow1col1" style="width:120px ; margin: 1px; text-align:right "onchange="myMark1(this.value);>
+             <option value="space1">select</option>
+             <option value="select1">select</option>
+             <option value="present1">present</option>
+             <option value="absent1">absent</option>
+             <option value="autorised1">week off</option>
+             <option value="sick1">leave</option>
+             <option value="late1">late</option>
+           </select>
+        </td>
+
+ <td><select name="row1col2" id="irow1col2" style="width:120px ; margin: 1px; text-align:right "onchange="myMark2(this.value);>
+<option value="space2">select</option>
+<option value="select2">select</option>
+<option value="present2">present</option>
+<option value="absent2">absent</option>
+<option value="autorised2">week off</option>
+<option value="sick2">leave</option>
+<option value="late2">late</option>
+</select></td>
+
+<td><select name="row1col3" id="irow1col3" style="width:120px ; margin: 1px; text-align:right "onchange="myMark3(this.value);>
+<option value="space3">select</option>
+<option value="select3">select</option>
+<option value="present3">present</option>
+<option value="absent3">absent</option>
+<option value="autorised3">week off</option>
+<option value="sick3">leave</option>
+<option value="late3">late</option>
+</select></td>
+
+
+<td><select name="row1col4" id="irow1col4" style="width:120px ; margin: 1px; text-align:right "onchange="myMark4(this.value);>
+<option value="select4">select</option>
+<option value="select4">select</option>
+<option value="present4">present</option>
+<option value="absent4">absent</option>
+<option value="autorised4">week off</option>
+<option value="sick4">leave</option>
+<option value="late4">late</option>
+</select></td>
+
+<td><select name="row1col5" id="irow1col5" style="width:120px ; margin: 1px; text-align:right "onchange="myMark5(this.value);>
+<option value="space">select</option>
+<option value="select5">select</option>
+<option value="present5">present</option>
+<option value="absent5">absent</option>
+<option value="autorised5">week off</option>
+<option value="sick5">leave</option>
+<option value="late5">late</option>
+</select></td></tr>
+
+<!--------------close 1-------------------------------------------------------------------------------------------------------------------------->
+
+<!--------------2-------------------------------------------------------------------------------------------------------------------------->
+
+<tr><td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBozo_XCoOCdgYajXYROWSEb10-R-OJqBW0w&usqp=CAU"  width="97" height="105"></td><td><center>S13478</center></td>
+<td class=p-2 mb-2 bg-white text-dark"><a href="">SUNIL</td>
+<td class="text-center">ANALYST</td>
+<td><select name="row2col1" id="irow2col1" style="width:120px ; margin: 1px; text-align:right "onchange="myMark1(this.value);>
+<option value="space1">select</option>
+<option value="select1">select</option>
+<option value="present1">present</option>
+<option value="absent1">absent</option>
+<option value="autorised1">week off</option>
+<option value="sick1">leave</option>
+<option value="late1">late</option>
+</select></td>
+
+ <td><select name="row2col2" id="irow2col2" style="width:120px ; margin: 1px; text-align:right "onchange="myMark2(this.value);>
+<option value="space2">select</option>
+<option value="select2">select</option>
+<option value="present2">present</option>
+<option value="absent2">absent</option>
+<option value="autorised2">week off</option>
+<option value="sick2">leave</option>
+<option value="late2">late</option>
+</select></td>
+
+<td><select name="row2col3" id="irow2col3" style="width:120px ; margin: 1px; text-align:right "onchange="myMark3(this.value);>
+<option value="space3">select</option>
+<option value="select3">select</option>
+<option value="present3">present</option>
+<option value="absent3">absent</option>
+<option value="autorised3">week off</option>
+<option value="sick3">leave</option>
+<option value="late3">late</option>
+</select></td>
+
+
+<td><select name="row2col4" id="irow2col4" style="width:120px ; margin: 1px; text-align:right "onchange="myMark4(this.value);>
+<option value="select4">select</option>
+<option value="select4">select</option>
+<option value="present4">present</option>
+<option value="absent4">absent</option>
+<option value="autorised4">week off</option>
+<option value="sick4">leave</option>
+<option value="late4">late</option>
+</select></td>
+
+<td><select name="row2col5" id="irow2col5" style="width:120px ; margin: 1px; text-align:right "onchange="myMark5(this.value);>
+<option value="space">select</option>
+<option value="select5">select</option>
+<option value="present5">present</option>
+<option value="absent5">absent</option>
+<option value="autorised5">week off</option>
+<option value="sick5">leave</option>
+<option value="late5">late</option>
+</select></td></tr>
+
+<!--------------close 2-------------------------------------------------------------------------------------------------------------------------->
+<!--------------3-------------------------------------------------------------------------------------------------------------------------->
+<tr><td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTue0QzcbncaPSxMCpLhzOab4a1Sux6xXpow&usqp=CAU"  width="97" height="105"></td><td><center>S356781</center></td>
+<td class=p-2 mb-2 bg-white text-dark"><a href="">BHARATH</td>
+<td class="text-center">TECH SUPPORT</td>
+<td><select name="row3col1" id="irow3col1" style="width:120px ; margin: 1px; text-align:right "onchange="myMark1(this.value);>
+<option value="space1">select</option>
+<option value="select1">select</option>
+<option value="present1">present</option>
+<option value="absent1">absent</option>
+<option value="autorised1">week off</option>
+<option value="sick1">leave</option>
+<option value="late1">late</option>
+</select></td>
+
+ <td><select name="row3col2" id="irow3col2" style="width:120px ; margin: 1px; text-align:right "onchange="myMark2(this.value);>
+<option value="space2">select</option>
+<option value="select2">select</option>
+<option value="present2">present</option>
+<option value="absent2">absent</option>
+<option value="autorised2">week off</option>
+<option value="sick2">leave</option>
+<option value="late2">late</option>
+</select></td>
+
+<td><select name="row3col3" id="irow3col3" style="width:120px ; margin: 1px; text-align:right "onchange="myMark3(this.value);>
+<option value="space3">select</option>
+<option value="select3">select</option>
+<option value="present3">present</option>
+<option value="absent3">absent</option>
+<option value="autorised3">week off</option>
+<option value="sick3">leave</option>
+<option value="late3">late</option>
+</select></td>
+
+
+<td><select name="row3col4" id="irow3col4" style="width:120px ; margin: 1px; text-align:right "onchange="myMark4(this.value);>
+<option value="select4">select</option>
+<option value="select4">select</option>
+<option value="present4">present</option>
+<option value="absent4">absent</option>
+<option value="autorised4">week off</option>
+<option value="sick4">leave</option>
+<option value="late4">late</option>
+</select></td>
+
+<td><select name="row3col5" id="irow3col5" style="width:120px ; margin: 1px; text-align:right "onchange="myMark5(this.value);>
+<option value="space">select</option>
+<option value="select5">select</option>
+<option value="present5">present</option>
+<option value="absent5">absent</option>
+<option value="autorised5">week off</option>
+<option value="sick5">leave</option>
+<option value="late5">late</option>
+</select></td></tr>
+
+
+<!--------------close 3-------------------------------------------------------------------------------------------------------------------------->
+<!--------------4-------------------------------------------------------------------------------------------------------------------------->
+<tr><td><img src="https://cdn3.vectorstock.com/i/1000x1000/26/07/girl-icon-woman-avatar-face-icon-cartoon-style-vector-24742607.jpg"  width="97" height="105"></td><td><center>S145689</center></td>
+<td class=p-2 mb-2 bg-white text-dark"><a href="">LAKSHMI</td>
+<td class="text-center">DEVELPOER</td>
+<td><select name="row4col1" id="irow4col1" style="width:120px ; margin: 1px; text-align:right "onchange="myMark1(this.value);>
+<option value="space1">select</option>
+<option value="select1">select</option>
+<option value="present1">present</option>
+<option value="absent1">absent</option>
+<option value="autorised1">week off</option>
+<option value="sick1">leave</option>
+<option value="late1">late</option>
+<option value="late1">l</option>
+</select></td>
+
+ <td><select name="row4col2" id="irow4col2" style="width:120px ; margin: 1px; text-align:right "onchange="myMark2(this.value);>
+<option value="space2">select</option>
+<option value="select2">select</option>
+<option value="present2">present</option>
+<option value="absent2">absent</option>
+<option value="autorised2">week off</option>
+<option value="sick2">leave</option>
+<option value="late2">late</option>
+</select></td>
+
+<td><select name="row4col3" id="irow4col3" style="width:120px ; margin: 1px; text-align:right "onchange="myMark3(this.value);>
+<option value="space3">select</option>
+<option value="select3">select</option>
+<option value="present3">present</option>
+<option value="absent3">absent</option>
+<option value="autorised3">week off</option>
+<option value="sick3">leave</option>
+<option value="late3">late</option>
+</select></td>
+
+
+<td><select name="row4col4" id="irow4col4" style="width:120px ; margin: 1px; text-align:right "onchange="myMark4(this.value);>
+<option value="select4">select</option>
+<option value="select4">select</option>
+<option value="present4">present</option>
+<option value="absent4">absent</option>
+<option value="autorised4">week off</option>
+<option value="sick4">leave</option>
+<option value="late4">late</option>
+</select></td>
+
+<td><select name="row4col5" id="irow4col5" style="width:120px ; margin: 1px; text-align:right "onchange="myMark5(this.value);>
+<option value="space">select</option>
+<option value="select5">select</option>
+<option value="present5">present</option>
+<option value="absent5">absent</option>
+<option value="autorised5">week off</option>
+<option value="sick5">leave</option>
+<option value="late5">late</option>
+</select></td></tr>
+
+
+<!--------------close 4-------------------------------------------------------------------------------------------------------------------------->
+<!--------------5-------------------------------------------------------------------------------------------------------------------------->
+<tr><td><img src="https://thumbs.dreamstime.com/b/boy-icon-avatar-symbol-isolated-white-boy-icon-avatar-symbol-isolated-white-background-man-face-icon-color-flat-style-152379819.jpg"  width="97" height="105"></td><td><center>S157896</center></td>
+<td class=p-2 mb-2 bg-white text-dark"><a href="">ARUN</td>
+<td class="text-center">DEVELOPER</td>
+<td><select name="row5col1" id="irow5col1" style="width:120px ; margin: 1px; text-align:right "onchange="myMark1(this.value);>
+<option value="space1">select</option>
+<option value="select1">select</option>
+<option value="present1">present</option>
+<option value="absent1">absent</option>
+<option value="autorised1">week off</option>
+<option value="sick1">leave</option>
+<option value="late1">late</option>
+</select></td>
+
+ <td><select name="row5col2" id="irow5col2" style="width:120px ; margin: 1px; text-align:right "onchange="myMark2(this.value);>
+<option value="space2">select</option>
+<option value="select2">select</option>
+<option value="present2">present</option>
+<option value="absent2">absent</option>
+<option value="autorised2">week off</option>
+<option value="sick2">leave</option>
+<option value="late2">late</option>
+</select></td>
+
+<td><select name="row5col3" id="irow5col3" style="width:120px ; margin: 1px; text-align:right "onchange="myMark3(this.value);>
+<option value="space3">select</option>
+<option value="select3">select</option>
+<option value="present3">present</option>
+<option value="absent3">absent</option>
+<option value="autorised3">week off</option>
+<option value="sick3">leave</option>
+<option value="late3">late</option>
+</select></td>
+
+
+<td><select name="row5col4" id="irow5col4" style="width:120px ; margin: 1px; text-align:right "onchange="myMark4(this.value);>
+<option value="select4">select</option>
+<option value="select4">select</option>
+<option value="present4">present</option>
+<option value="absent4">absent</option>
+<option value="autorised4">week off</option>
+<option value="sick4">leave</option>
+<option value="late4">late</option>
+</select></td>
+
+<td><select name="row5col5" id="irowcol5" style="width:120px ; margin: 1px; text-align:right "onchange="myMark5(this.value);>
+<option value="space">select</option>
+<option value="select5">select</option>
+<option value="present5">present</option>
+<option value="absent5">absent</option>
+<option value="autorised5">week off</option>
+<option value="sick5">leave</option>
+<option value="late5">late</option>
+</select></td></tr>
+
+
+<!--------------close 5-------------------------------------------------------------------------------------------------------------------------->
+<!--------------6-------------------------------------------------------------------------------------------------------------------------->
+<tr><td><img src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-vector-user-young-boy-avatar-icon-png-image_4827810.jpg"  width="97" height="105"></td><td><center>S213478</center></td>
+<td class=p-2 mb-2 bg-white text-dark"><a href="">NIHAL</td>
+<td class="text-center">TECH SUPPORT</td>
+<td><select name="row6col1" id="irow6col1" style="width:120px ; margin: 1px; text-align:right "onchange="myMark1(this.value);>
+<option value="space1">select</option>
+<option value="select1">select</option>
+<option value="present1">present</option>
+<option value="absent1">absent</option>
+<option value="autorised1">week off</option>
+<option value="sick1">leave</option>
+<option value="late1">late</option>
+</select></td>
+
+ <td><select name="row6col2" id="irow6col2" style="width:120px ; margin: 1px; text-align:right "onchange="myMark2(this.value);>
+<option value="space2">select</option>
+<option value="select2">select</option>
+<option value="present2">present</option>
+<option value="absent2">absent</option>
+<option value="autorised2">week off</option>
+<option value="sick2">leave</option>
+<option value="late2">late</option>
+</select></td>
+
+<td><select name="row6col3" id="irow6col3" style="width:120px ; margin: 1px; text-align:right "onchange="myMark3(this.value);>
+<option value="space3">select</option>
+<option value="select3">select</option>
+<option value="present3">present</option>
+<option value="absent3">absent</option>
+<option value="autorised3">week off</option>
+<option value="sick3">leave</option>
+<option value="late3">late</option>
+</select></td>
+
+
+<td><select name="row6col4" id="irow6col4" style="width:120px ; margin: 1px; text-align:right "onchange="myMark4(this.value);>
+<option value="select4">select</option>
+<option value="select4">select</option>
+<option value="present4">present</option>
+<option value="absent4">absent</option>
+<option value="autorised4">week off</option>
+<option value="sick4">leave</option>
+<option value="late4">late</option>
+</select></td>
+
+<td><select name="row6col5" id="irow6col5" style="width:120px ; margin: 1px; text-align:right "onchange="myMark5(this.value);>
+<option value="space">select</option>
+<option value="select5">select</option>
+<option value="present5">present</option>
+<option value="absent5">absent</option>
+<option value="autorised5">week off</option>
+<option value="sick5">leave</option>
+<option value="late5">late</option>
+</select></td></tr>
+
+<!--------------close 6-------------------------------------------------------------------------------------------------------------------------->
+
+</table></center>
+</div>
+</div><br>
+
+</form>
+
+<a href="success.html"><center><button class="button" >SAVE</button></a></center></center>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Profile with progress|| Learning robo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="style.css">-->
+<style>
+
+body {
+    background-color: #12192c;
+  }
+  
+  .achievement-box {
+    background-color: #FAD961;
+background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    display: flex;
+    height: 120px;
+    width: 540px;
+    margin:25px auto;
+    border-radius: 30px;
+  }
+  
+  .achievement-box-icon {
+    height: 110px;
+    width: 110px;
+  }
+  .achievement-box-icon > img{
+      width:100px;
+      height: 100px;
+      margin: 10px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .achievement-box-namebar-area {
+    color: #121;
+    display: inline-flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: space-around;
+    margin: 20px;
+    height: 80px;
+    font-weight: bold;
+  }
+  
+  .achievement-box-bar {
+    background-color: #202124;
+    border: 1px solid #202124;
+    height: 14px;
+    width: 380px;
+    border-radius: 12px;
+  }
+  
+  @keyframes skill-25 {
+    from { width: 0px; }
+    to { width: 95px; }
+  }
+  
+  @keyframes skill-50 {
+    from { 
+
+      border-radius: 12px;
+      width: 0px; 
+    }
+    to { 
+      width: 190px; 
+    }
+  }
+  
+  @keyframes skill-75 {
+     from { 
+    
+      border-radius: 12px;
+      width: 0px; 
+    }
+    to { width: 285px; }
+  }
+  
+  @keyframes skill-100 {
+     from { 
+    
+      border-radius: 12px;
+      width: 0px; 
+    }
+    to { width: 340px; }
+  }
+  
+  .achievement-box-status-25 {
+    background-color: rgb(100,255,120);
+    border-radius: 12px;
+    margin: 2px;
+    margin-left: 3px;
+    height: 9px;
+    width: 95px;
+    animation: skill-25 3s;
+  }
+  
+  .achievement-box-status-50 {
+    background-color: rgb(100,255,120);
+    border-radius: 12px;
+    margin: 2px;
+    height: 10px;
+    width: 190px;
+    animation: skill-50 3s;
+  }
+  
+  .achievement-box-status-75 {
+    background-color: rgb(100,255,120);
+    border-radius: 12px;
+    margin: 2px;
+    height: 9px;
+    width: 285px;
+    animation: skill-75 3s;
+  }
+  
+  .achievement-box-status-100 {
+    background-color: rgb(100,255,120);
+    border-radius: 12px;
+    margin: 2px;
+    height: 9px;
+    width: 340px;
+    animation: skill-100 3s;
+  }
+
+
+  .credit{
+    text-align: center;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.credit a{
+    text-decoration: none;
+    color:orange;
+    font-weight: bold;
+}
+h1{color: red;
+}
+h2{color: white;
+}
+
+      form {
+        background-color: #4654e1;
+        width: 300px;
+        height: 44px;
+        border-radius: 5px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }
+
+      input {
+        all: unset;
+        font: 16px system-ui;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      ::placeholder {
+        color: #fff;
+        opacity: 0.7; 
+      }
+
+      svg {
+        color: #fff;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+#log{  
+    
+    height: 30px;  
+    border: none;  
+    border-radius: 10px;  
+background-color: #ff007b;  
+    color: white;  
+  
+  
+}
+</style>
+</head>
+<body><br>
+<center><form role="search" id="form">
+      <input type="search" id="query" name="q" placeholder="Search employee." aria-label="Search through site content">
+      <button>
+        <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+      </button>
+    </form></center>
+    <script>
+      const f = document.getElementById('form');
+      const q = document.getElementById('query');
+      const google = 'https://www.google.com/search?q=site%3A+';
+      const site = 'pagedart.com';
+
+      function submitted(event) {
+        event.preventDefault();
+        const url = google + site + '+' + q.value;
+        const win = window.open(url, '_blank');
+        win.focus();
+      }
+
+      f.addEventListener('submit', submitted);
+    </script><br>
+ <center> <h1>WEEKLY REPORT(4/04/2022 - 9/04/2022)</h1></center>
+
+<br>
+<marquee>
+<center><h2>**click on the user icon to view full deatils of the employee</h2></center></marquee>
+    <div class="achievement-box">
+        <a href="leave.html"><div class="achievement-box-icon">
+            <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png">  
+        </div></a>
+        <div class="achievement-box-namebar-area">
+            <span>Name : KARTHIK</span>
+            <span>Attendence Status(4/04/2022 - 9/04/2022): </span>
+           <div class="achievement-box-bar">
+             <div class="achievement-box-status-75">
+             </div>
+           </div>
+        </div>
+      </div>
+      <div class="achievement-box">
+        <div class="achievement-box-icon">
+           <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png">  
+        </div>
+        <div class="achievement-box-namebar-area">
+          <span>Name :SUNIL </span>
+          <span>Attendence Status(4/04/2022 - 9/04/2022): </span>
+           <div class="achievement-box-bar">
+             <div class="achievement-box-status-50">
+             </div>
+           </div>
+        </div>
+      </div>
+      <div class="achievement-box">
+        <div class="achievement-box-icon">
+            <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png">  
+        </div>
+        <div class="achievement-box-namebar-area">
+          <span>Name :BHARATH </span>
+          <span>Attendence Status(4/04/2022 - 9/04/2022):</span>
+           <div class="achievement-box-bar">
+             <div class="achievement-box-status-75">
+             </div>
+           </div>
+        </div>
+      </div>
+      <div class="achievement-box">
+        <div class="achievement-box-icon">
+            <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png">  
+        </div>
+        <div class="achievement-box-namebar-area">
+            <span>Name : LAKSHMI</span>
+            <span>Attendence Status(4/04/2022 - 9/04/2022): </span>
+           <div class="achievement-box-bar">
+             <div class="achievement-box-status-100">
+             </div>
+           </div>
+        </div>
+      </div>
+      
+
+<div class="achievement-box">
+        <a href=""><div class="achievement-box-icon">
+            <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png">  
+        </div></a>
+        <div class="achievement-box-namebar-area">
+            <span>Name :ARUN </span>
+            <span>Attendence Status(4/04/2022 - 9/04/2022): </span>
+           <div class="achievement-box-bar">
+             <div class="achievement-box-status-25">
+             </div>
+           </div>
+        </div>
+      </div>
+      
+  <div class="achievement-box">
+        <div class="achievement-box-icon">
+            <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png">  
+        </div>
+        <div class="achievement-box-namebar-area">
+            <span>Name :NIHAL </span>
+            <span>Attendence Status(4/04/2022 - 9/04/2022): </span>
+           <div class="achievement-box-bar">
+             <div class="achievement-box-status-50">
+             </div>
+           </div>
+        </div>
+      </div> 
+
+<center>
+<a href="index.html">
+        <input type="button" name="log" id="log" value="GO TO HOME"></a></center>
+</body>
+</html>

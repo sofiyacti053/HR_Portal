@@ -1,0 +1,374 @@
+<html>
+<head>
+ <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />--> 
+
+<style>
+
+:root {  
+       --c-blue-900: #081030;  
+       --c-blue-800: #111b40;  
+       --c-blue-700: #152148;  
+       --c-blue-500: #1d7bdb;  
+       --c-blue-300: #293359;  
+       --c-blue-200: #4e5985;  
+       --c-blue-100: #dfe8ff;  
+       --c-green-400: #4ade80;  
+ }  
+ /* Some basic CSS overrides */  
+  body {  
+       line-height: 1.5;  
+       font-family: "Outfit", sans-serif;  
+       display: flex;  
+       align-items: center;  
+       justify-content: center;  
+       background-color: var(--c-blue-900);  
+       color: var(--c-blue-100);  
+       padding: 5vh 25px;  
+ }  
+  button, input, select, textarea {  
+       font: inherit;  
+ }  
+  a {  
+       color: inherit;  
+ }  
+ /* End basic CSS override */  
+  .price-table {  
+       background-color: var(--c-blue-700);  
+       border-radius: 16px;  
+       max-width: 155px;  
+       padding: 42px;  
+       display: flex;  
+       flex-direction: column;  
+       box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);  
+       position: relative;  
+       background-image: linear-gradient(135deg, rgba(74, 222, 128, 0.15), rgba(29, 123, 219, 0.1) 20%, var(--c-blue-700) 40%, var(--c-blue-700) 100%);  
+ }  
+  .price-table:after {  
+       content: "";  
+       display: block;  
+       top: -3px;  
+       left: -3px;  
+       bottom: -3px;  
+       right: -3px;  
+       z-index: -1;  
+       position: absolute;  
+       border-radius: 16px;  
+       background-image: linear-gradient(135deg, var(--c-green-400), var(--c-blue-500) 40%, var(--c-blue-300) 60%, var(--c-blue-700) 100%);  
+ }  
+  .price-table .price {  
+       font-size: 2rem;  
+       line-height: 1;  
+       font-weight: 700;  
+       display: inline-flex;  
+       align-self: center;  
+       align-items: center;  
+       gap: 4px;  
+       position: relative;  
+       color: #fff;  
+ }  
+  .price-table .price small {  
+       font-size: 1.25rem;  
+       font-weight: 400;  
+       position: absolute;  
+       left: -1.5ch;  
+ }  
+  .price-table .title {  
+       font-size: 1.25rem;  
+       font-weight: 600;  
+       line-height: 1.25;  
+       text-align: center;  
+       margin-top: 16px;  
+       color: #fff;  
+ }  
+  .price-table .description {  
+       font-size: 1rem;  
+       text-align: center;  
+       margin-top: 4px;  
+ }  
+  .features {  
+       margin-top: 32px;  
+ }  
+  .feature {  
+       position: relative;  
+ }  
+  .feature + .feature {  
+       margin-top: 16px;  
+ }  
+  .feature summary {  
+       display: inline-flex;  
+       align-items: center;  
+       list-style: none;  
+ }  
+  .feature summary::-webkit-details-marker {  
+       display: none;  
+ }  
+  .feature[open] summary:after {  
+       content: "";  
+       display: block;  
+       top: 0;  
+       left: 0;  
+       right: 0;  
+       bottom: 0;  
+       position: fixed;  
+       z-index: 50;  
+ }  
+  .feature[open] div {  
+       animation: scale 0.15s ease;  
+ }  
+  .feature .checkmark {  
+       width: 24px;  
+       height: 24px;  
+       border-radius: 50%;  
+       background-color: var(--c-green-400);  
+       display: flex;  
+       align-items: center;  
+       justify-content: center;  
+       margin-right: 12px;  
+ }  
+  .feature .checkmark svg {  
+       width: 18px;  
+       height: 18px;  
+       color: #fff;  
+ }  
+  .feature .question-icon {  
+       display: flex;  
+       align-items: center;  
+       margin-left: 6px;  
+       cursor: pointer;  
+ }  
+  .feature .answer {  
+       padding: 12px;  
+       background-color: var(--c-blue-800);  
+       border-radius: 6px;  
+       position: absolute;  
+       top: -12px;  
+       z-index: 100;  
+       transform: translatey(-100%) translatex(-50%);  
+       transform-origin: bottom center;  
+       width: 80%;  
+       left: 50%;  
+       border: 1px solid var(--c-blue-300);  
+       box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);  
+ }  
+  @keyframes scale {  
+       0% {  
+            transform: translatey(-100%) translatex(-50%) scale(0);  
+      }  
+       100% {  
+            transform: translatey(-100%) translatex(-50%) scale(1);  
+      }  
+ }
+.container{  
+   width: 150px;  
+   position: relative;  
+ }  
+ .btn{  
+   width: 100%;  
+   height: 35px;  
+   cursor: pointer;  
+   position: relative;  
+   display: flex;  
+ }  
+ .btn::before{  
+   content: 'Reason';  
+   display: flex;  
+   align-items: center;  
+   width: 100%;  
+   height: 100%;  
+   background: white;  
+   border-radius: 5px;  
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.062);  
+   border: 2px solid #0D47A1;  
+   padding-left: 1em;  
+   background: linear-gradient(to right, white 80%, #0D47A1 20%);  
+ }  
+ .btn::after{  
+   content: '\f062';  
+   position: absolute;  
+   right: 0;  
+   display: flex;  
+   align-items: center;  
+   justify-content: center;  
+   font-family: 'Font Awesome 5 Free';  
+   font-weight: 700;  
+   width: 20%;  
+   height: 110%;  
+   color: white;  
+   transform: rotate(180deg);  
+   transition: all .4s;  
+ }  
+ .btn:checked::after{  
+   transform: rotate(0deg);  
+ }  
+ .list{  
+   position: absolute;  
+   margin-top: 0.5em;  
+   width: 100%;  
+   height: 175px;  
+   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);  
+   display: flex;  
+   flex-direction: column;  
+   transition: all .4s;  
+ }  
+ input:checked ~ .list{  
+   clip-path: none;  
+ }  
+ .list a{  
+   height: 25%;  
+   display: flex;  
+   align-items: center;  
+   padding: 0.3em 0 0.3em 1em;  
+   text-decoration: none;  
+   margin: 0.3em 0;  
+   background: white;  
+   color: rgb(36, 36, 36);  
+   border-radius: 5px;  
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.062);  
+   transition: background .4s;  
+ }  
+ .list a:hover{  
+   background: #FF5F6D;  
+   color: white;  
+ }   
+input{
+    width: 150px;
+    height: 35px;
+    margin: 8px 0;
+    font-size: 1.2rem;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: white;
+
+}
+.text{
+    border-bottom: 2px solid rgb(190,190,190);
+}
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+
+&nbsp&nbsp&nbsp&nbsp
+<div class="price-section">  
+      <article class="price-table">  
+           <div class="price">MONDAY</div>  
+           <h2 class="title">April 4,2022</h2>  
+           <p class="description">3:00PM-12:00AM 
+           </p>  
+           <br>
+<div class="container">  
+     <input type="checkbox" name="" id="" class="btn" placeholder="Select Category">  
+     <div class="list">  
+       <a href="#">&nbspSick Leave</a>  
+       <a href="#">&nbspCasual Leave</a>  
+       <a href="#">&nbspOther</a>      
+     </div> 
+           </div>  <br>
+
+        <input type="email" name="" id="" class="text" placeholder="Reason(optional)"><br>
+<br><br><br>  <br><br><br> <a href="applied.html"> <button class="button">APPLY LEAVE</button></a>
+      </article>  </div>&nbsp&nbsp&nbsp&nbsp
+<div class="price-section">  
+      <article class="price-table">  
+           <div class="price">TUESDAY</div>  
+           <h2 class="title">April 5,2022</h2>  
+           <p class="description">3:00PM-12:00AM 
+           </p>  
+           <br>
+<div class="container">  
+     <input type="checkbox" name="" id="" class="btn" placeholder="Select Category">  
+     <div class="list">  
+       <a href="#">&nbspSick Leave</a>  
+       <a href="#">&nbspCasual Leave</a>  
+       <a href="#">&nbspOther</a>      
+     </div> 
+           </div>  <br>
+
+        <input type="email" name="" id="" class="text" placeholder="Reason(optional)"><br>
+<br><br><br>  <br><br><br><a href="applied.html"> <button class="button">APPLY LEAVE</button></a>
+      </article>  </div>&nbsp&nbsp&nbsp&nbsp
+
+<div class="price-section">  
+      <article class="price-table">  
+           <div class="price">WEDNESDAY</div>  
+           <h2 class="title">April 6,2022</h2>  
+           <p class="description">3:00PM-12:00AM 
+           </p>  
+           <br>
+<div class="container">  
+     <input type="checkbox" name="" id="" class="btn" placeholder="Select Category">  
+     <div class="list">  
+       <a href="#">&nbspSick Leave</a>  
+       <a href="#">&nbspCasual Leave</a>  
+       <a href="#">&nbspOther</a>      
+     </div> 
+           </div>  <br>
+
+        <input type="email" name="" id="" class="text" placeholder="Reason(optional)"><br>
+<br><br><br>  <br><br><br> <a href="applied.html"> <button class="button">APPLY LEAVE</button></a>
+      </article>  </div>&nbsp&nbsp&nbsp&nbsp
+
+<div class="price-section">  
+      <article class="price-table">  
+           <div class="price">THURSDAY</div>  
+           <h2 class="title">April 7,2022</h2>  
+           <p class="description">3:00PM-12:00AM 
+           </p>  
+           <br>
+<div class="container">  
+     <input type="checkbox" name="" id="" class="btn" placeholder="Select Category">  
+     <div class="list">  
+       <a href="#">&nbspSick Leave</a>  
+       <a href="#">&nbspCasual Leave</a>  
+       <a href="#">&nbspOther</a>      
+     </div> 
+           </div>  <br>
+
+        <input type="email" name="" id="" class="text" placeholder="Reason(optional)"><br>
+<br><br><br>  <br><br><br> <a href="applied.html"> <button class="button">APPLY LEAVE</button></a>
+      </article>  </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<div class="price-section">  
+      <article class="price-table">  
+           <div class="price">FRIDAY</div>  
+           <h2 class="title">April 8,2022</h2>  
+           <p class="description">3:00PM-12:00AM 
+           </p>  
+           <br>
+<div class="container">  
+     <input type="checkbox" name="" id="" class="btn" placeholder="Select Category">  
+     <div class="list">  
+       <a href="#">&nbspSick Leave</a>  
+       <a href="#">&nbspCasual Leave</a>  
+       <a href="#">&nbspOther</a>      
+     </div> 
+           </div>  <br>
+
+        <input type="email" name="" id="" class="text" placeholder="Reason(optional)"><br>
+<br><br><br>  <br><br><br><a href="applied.html"> <button class="button">APPLY LEAVE</button></a>
+      </article>  </div><hr>
+
+</body>
+</html>
